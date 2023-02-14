@@ -75,6 +75,10 @@ body {
   height: 80px;
   padding: 15px;
 }
+.navbar .collapse {
+  z-index: 100;
+  background-color: #fff;
+}
 .navbar .navbar-nav {
   margin-left: 4rem;
 }

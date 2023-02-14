@@ -1,0 +1,107 @@
+/* Common Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  line-height: 1.4;
+  font-family: "Work Sans", sans-serif;
+}
+.work-sans {
+  font-family: "Work Sans", sans-serif;
+}
+.font-700 {
+  font-weight: 700;
+}
+.open-sans {
+  font-family: "Open Sans", sans-serif;
+}
+.container {
+  max-width: 90% !important;
+}
+.login-icon::before {
+  font-family: "Font Awesome 5 free"; /* change like this */
+  font-weight: 600; /* insert this definition */
+  font-size: 1rem;
+  content: "\f2f6";
+  padding-right: 4px;
+  color: #333;
+  /* font-size: 15px; */
+}
+.form-inline {
+  color: #333;
+}
+/* End of common Styles */
+
+/* Header styles */
+.alert {
+  background-color: rgba(92, 92, 92, 0.8);
+  border-radius: 0;
+  padding: 0;
+  margin-bottom: 0;
+  color: #fff;
+  font-size: 14px;
+}
+.close {
+  color: rgb(246, 242, 227) !important;
+}
+.alert .download {
+  max-width: 500px;
+  background-color: rgb(38, 48, 61);
+  height: 3.75rem;
+  margin: auto;
+  cursor: pointer;
+}
+.alert a {
+  color: rgb(255, 109, 29);
+  font-size: 8px;
+  border: 2px solid rgb(255, 109, 29);
+  line-height: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 0 5px;
+}
+.alert-dismissible .close {
+  position: static;
+  padding: 1rem;
+}
+/* End alert */
+
+/* Navbar styles */
+.navbar {
+  box-shadow: 0 0 8px 0 rgb(0 0 0 / 12%);
+  font-size: 16px;
+  height: 80px;
+  padding: 15px;
+}
+.navbar .navbar-nav {
+  margin-left: 4rem;
+}
+.navbar .navbar-nav .nav-link {
+  color: #444;
+}
+.navbar .form-inline .login {
+  color: #333;
+}
+.navbar .form-inline .login:hover,
+.navbar .form-inline .login:hover .login-icon::before,
+.navbar .form-inline .btn:hover,
+.navbar .navbar-nav li .nav-link:hover {
+  color: rgb(255, 109, 29);
+  text-decoration: none;
+}
+/* End Navbar */
+
+/* Map styles */
+
+/* Set the size of the div element that contains the map */
+#map {
+  height: 500px; /* The height is 400 pixels */
+  width: 100%; /* The width is the width of the web page */
+}
+#map .search-input {
+  bottom: 150px;
+  left: 34%;
+  z-index: 5;
+}

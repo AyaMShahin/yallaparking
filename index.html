@@ -5,7 +5,17 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- JQuery UI -->
+  <link rel="stylesheet" href="css/jquery-ui.min.css">
+  <script src="js/external/jquery/jquery.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
 
+  <script>
+    var jqOld = jQuery.noConflict();
+    jqOld(function () {
+      jqOld("#datepicker").datepicker();
+    })
+  </script>
   <!-- Google Fonts "WorkSans Font Family" -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +25,10 @@
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+  <!-- Slick stylesheet -->
+  <link rel="stylesheet" href="css/slick.css">
+  <!-- Add the new slick-theme.css if you want the default styling -->
+  <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
   <!-- Main StyleSheet -->
   <link rel="stylesheet" href="css/style.css">
   <!-- FontAwesome stylesheet -->
@@ -72,6 +85,7 @@
     </nav>
     <!-- End navbar -->
   </header>
+
   <main>
     <!-- Google Map -->
     <div class="map position-relative" id="map">
@@ -79,16 +93,81 @@
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3411.4779570361197!2d29.94665271502145!3d31.2351895682938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f5c4e733b3090f%3A0xcb24518d6ccdbfe8!2sStanley%20Bridge!5e0!3m2!1sen!2seg!4v1676333004046!5m2!1sen!2seg"
         width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"></iframe>
-      <div class="search-input d-flex flex-row position-absolute">
-        <input type="search" name="search" id="search">
-        <label for="date">Select Start Date:</label>
-        <input type="date" name="date" id="date">
+      <div
+        class="search-input d-md-block border-round d-lg-flex shadow flex-row position-absolute col-lg-8 col-sm-8 align-items-center justify-content-between">
+        <input class="col-lg-3 d-md-block search border-right" type="search" name="search" id="search"
+          placeholder="Where would you like to park?">
+        <label class=" col-sm-4 d-md-block" for="date">Select Start Date:</label>
+        <input class="border-0 col-lg-2 date text-muted d-md-block" type="date" name="date" id="date">
+        <button class="btn font-700 border-0 border-round col-lg-2">Search</button>
       </div>
   </main>
 
+  <!-- Features Section -->
+  <section class="features">
+    <div class="container">
+      <div class="content d-flex flex-column">
+        <div class="head mb-5 text-center">
+          <h2 class="">Don't waste your time looking for a place to park </h2>
+          <p>Search our listings and find the perfect spot near your home or office. </p>
+        </div>
+        <div
+          class="items text-center d-flex flex-sm-column flex-lg-row col-lg-10 m-auto align-items-center align-content-center">
+          <div class="item d-flex flex-column flex-wrap align-items-center col-md-4 col-sm-8 mb-sm-4">
+            <img src="./images/mapIllustration@2x.png" alt="map" height="200" width="200">
+            <h3 class="my-4">Search For Parking </h3>
+            <p class="text-muted">Search more than 700 parking spaces across Egypt</p>
+          </div>
 
+          <div class="item d-flex flex-column align-items-center col-md-4 col-sm-8 mb-sm-4">
+            <img src="./images/bookIllustration@2x.png" alt="booking" height="200" width="200">
+            <h3 class="my-4">Book Parking </h3>
+            <p class="text-muted">Book & Pay online using our secure booking system.</p>
+          </div>
 
+          <div class="item d-flex flex-column align-items-center col-md-4 col-sm-8">
+            <img src="./images/carIllustration@2x.png" alt="car" height="200" width="200">
+            <h3 class="my-4">Park Your Car </h3>
+            <p class="text-muted">Receive your access card in 24 hours & park. It really is that simple.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--End Features Section -->
 
+  <!-- Partners Section -->
+  <section class="partners">
+    <div class="container">
+      <div class="head text-center">
+        <h2 class="">Our Parking Partners </h2>
+        <p>We are proudly partnered with the following companies </p>
+      </div>
+      <div class="content col-lg-10 m-auto">
+        <div class="partner">
+          <img src="./images/HomeToHome.png" alt="HomeToHome logo">
+        </div>
+        <div class="partner">
+          <img src="./images/mag.png" alt="MAG logo">
+        </div>
+        <div class="partner">
+          <img src="./images/NationalCarParks.png" alt="NationalCarParks logo">
+        </div>
+        <div class="partner">
+          <img src="./images/deyaar.png" alt="deyaar logo">
+        </div>
+        <div class="partner">
+          <img src="./images/doubletree.png" alt="doubletree logo">
+        </div>
+        <div class="partner">
+          <img src="./images/dubizzle.png" alt="dubizzle logo" width="150" height="100">
+        </div>
+        <div class="partner">
+          <img src="./images/intrecontinental.png" alt="intrecontinental logo" width="150" height="100">
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -100,8 +179,13 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
+  <!-- JQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
-
+  <!-- Slick CDN -->
+  <script src="js/slick.js"></script>
   <script src="js/main.js"></script>
   <!-- 
       The `defer` attribute causes the callback to execute after the full HTML

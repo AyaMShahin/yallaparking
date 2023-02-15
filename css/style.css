@@ -231,4 +231,6 @@ body {
 }
 .partners .content .partner img {
   margin: auto;
+  /* width: 100%; */
+  /* height: auto; */
 }

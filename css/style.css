@@ -551,16 +551,8 @@ nav .form-inline .lost_password .lost:hover {
   }
 }
 @media only screen and (min-width: 768px) {
-  .community .slick-track {
-    flex-direction: row;
-  }
-  .community .slick-slide {
-    width: 439px !important;
-  }
-}
-@media only screen and (min-width: 768px) {
   .join .content {
-    top: 110px;
+    top: 11px;
   }
   .join .content h2 {
     font-size: 29px;
@@ -568,6 +560,16 @@ nav .form-inline .lost_password .lost:hover {
   .join .content p {
     font-size: 19px;
     font-weight: 400;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .join .content {
+    top: 10px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .join .content {
+    top: 110px;
   }
 }
 /* End of Join */
@@ -609,6 +611,35 @@ footer .cont .right .list li:hover {
 footer .cont .right .info p {
   color: #707070;
 }
+@media only screen and (max-width: 600px), only screen and (min-width: 600px) {
+  footer .cont {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+  footer .cont .right .r-content {
+    flex-direction: column;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+  }
+  footer .cont .right .info {
+    margin-left: 0 !important;
+  }
+}
+@media only screen and (min-width: 992px), only screen and (min-width: 1200px) {
+  footer .cont {
+    flex-direction: row;
+    align-items: center !important;
+  }
+  footer .cont .right .r-content {
+    flex-direction: row;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  footer .cont .right .info {
+    margin-left: 3rem !important;
+  }
+}
+
 /* End Footer */
 
 /* Scroll up button styles */

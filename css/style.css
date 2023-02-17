@@ -443,6 +443,15 @@ nav .form-inline .lost_password .lost:hover {
 .community .slick-track {
   padding-bottom: 80px;
 }
+.community .c-content {
+  display: flex;
+  flex-grow: 1;
+  /* flex-wrap: wrap; */
+  max-width: 95%;
+  flex-direction: row;
+  margin: auto;
+  justify-content: space-around;
+}
 @media only screen and (max-width: 600px), only screen and (min-width: 600px) {
   .community .slick-track {
     display: flex !important;
@@ -450,10 +459,15 @@ nav .form-inline .lost_password .lost:hover {
     align-items: center;
   }
   .community .client {
-    width: 100%;
+    max-width: 450px;
+    margin: auto;
+    margin-right: 40px;
   }
   .community .slick-slide {
     width: 100% !important;
+  }
+  .community .c-content {
+    flex-direction: column;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -462,6 +476,11 @@ nav .form-inline .lost_password .lost:hover {
   }
   .community .slick-slide {
     width: 439px !important;
+  }
+}
+@media only screen and (min-width: 992px), only screen and (min-width: 1200px) {
+  .community .c-content {
+    flex-direction: row;
   }
 }
 .community .client .review {
@@ -479,6 +498,9 @@ nav .form-inline .lost_password .lost:hover {
 
 .community .client .person {
   margin-top: 30px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 .community .client .person img {
   width: 60px;

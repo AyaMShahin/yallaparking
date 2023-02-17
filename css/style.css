@@ -633,6 +633,9 @@ footer .cont .right .list li:hover {
 footer .cont .right .info p {
   color: #707070;
 }
+footer .cont .right .info a {
+  color: #f18120 !important;
+}
 @media only screen and (max-width: 600px), only screen and (min-width: 600px) {
   footer .cont {
     flex-direction: column;

@@ -105,51 +105,8 @@ $(document).ready(function () {
       },
     ],
   });
-
-  //Reviews Slider
-  $(".community .c-content").slick({
-    dots: true,
-    infinite: true,
-    centerMode: true,
-    speed: 500,
-    centerPadding: "60px",
-    slidesToShow: 3,
-    arrows: false,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          infinite: true,
-          centerPadding: "40px",
-          slidesToShow: 3,
-        },
-      },
-      {
-        breakpoint: 481,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          infinite: true,
-          centerPadding: "40px",
-          slidesToShow: 3,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          infinite: true,
-          centerPadding: "0px",
-          slidesToShow: 1,
-        },
-      },
-    ],
-  });
 });
+//Reviews Slider
 
 $(document).ready(function () {
   var btn = $("#button");

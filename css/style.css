@@ -158,7 +158,7 @@ nav .form-inline .form-group {
 nav .form-inline .form-group input {
   width: 100%;
 }
-nav .form-inline .form-group .submit {
+.submit {
   background-color: #f18120;
   min-width: 120px;
   line-height: 26px;

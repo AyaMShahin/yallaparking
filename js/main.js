@@ -20,6 +20,8 @@ $(document).ready(function () {
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 2,
+    autoplay: true,
+    autoplaySpeed: 2000,
     responsive: [
       {
         breakpoint: 1024,
@@ -58,5 +60,110 @@ $(document).ready(function () {
       // settings: "unslick"
       // instead of a settings object
     ],
+  });
+
+  // Places Slider
+
+  $(".places .p-items").slick({
+    centerMode: true,
+    dots: true,
+    infinite: true,
+    centerPadding: "60px",
+    slidesToShow: 3,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          infinite: true,
+          centerPadding: "40px",
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 481,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          infinite: true,
+          centerPadding: "40px",
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          infinite: true,
+          centerPadding: "0px",
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
+
+  //Reviews Slider
+  $(".community .c-content").slick({
+    dots: true,
+    infinite: true,
+    centerMode: true,
+    speed: 500,
+    centerPadding: "60px",
+    slidesToShow: 3,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          infinite: true,
+          centerPadding: "40px",
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 481,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          infinite: true,
+          centerPadding: "40px",
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          infinite: true,
+          centerPadding: "0px",
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
+});
+
+$(document).ready(function () {
+  var btn = $("#button");
+
+  $(window).scroll(function () {
+    if ($(window).scrollTop() > 300) {
+      btn.addClass("show");
+    } else {
+      btn.removeClass("show");
+    }
+  });
+
+  btn.on("click", function (e) {
+    e.preventDefault();
+    $("html, body").animate({ scrollTop: 0 }, "300");
   });
 });

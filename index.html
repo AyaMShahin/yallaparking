@@ -40,6 +40,9 @@
 
 <body>
 
+  <!-- Back to top button -->
+  <a id="button"></a>
+
   <header>
     <!-- Alert -->
     <div class="alert font-700 open-sans  alert-dismissible fade show" role="alert">
@@ -74,13 +77,65 @@
               <a class="nav-link" href="#">Download Our App</a>
             </li>
           </ul>
-          <form class="form-inline work-sans my-2 my-lg-0">
-            <a class="login" href="http://">
-              <span class="login-icon"></span>
-              Log In</a>
-            <a class="btn my-2 my-sm-0" type="submit">Register</a>
-          </form>
+          <div class="form-inline work-sans my-2 my-lg-0">
+            <button type="button" class="btn login py-3 px-4" data-toggle="modal" data-target="#exampleModalCenter">
+              <span class="login-icon"></span> Log In</button>
+
+            <!-- Modal -->
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+              aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+
+                    <form action="#" class="signup-form">
+                      <div class="form-group mb-4">
+                        <label class="mb-3 text-dark font-700" for="name">Email Address:</label>
+                        <input type="text" class="form-control" placeholder="Email Address">
+                      </div>
+                      <div class="form-group mb-4">
+                        <label class="mb-3 text-dark font-700" for="password">Password:</label>
+                        <input type="password" class="form-control" placeholder="password">
+                      </div>
+                      <div class="checkboxes mb-4 col-md-12">
+                        <input id="RememberMe" type="checkbox" name="check">
+                        <label class="text-dark font-700" for="RememberMe">Remember Me</label>
+                      </div>
+                      <div class="form-group mb-3">
+                        <button type="submit" class="form-control btn border-round submit px-3">Login</button>
+                      </div>
+                      <p>
+                        <span class="lost_password col-md-12 margin-top-10">
+                          <a href="/account/forgottenpassword" class="text-muted lost">Forgot your password?</a>
+                        </span>
+                      </p>
+
+                      <p class="text-center">or sign up with:</p>
+                      <div class="form-group log justify-content-center">
+                        <button type="button" class="btn btn-link google btn-floating mx-1">
+                          <i class="fab fa-google icon"></i>
+                        </button>
+                      </div>
+                  </div>
+
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <a class="btn my-2 my-sm-0" type="submit">Register</a>
         </div>
+      </div>
       </div>
     </nav>
     <!-- End navbar -->
@@ -108,11 +163,11 @@
     <div class="container">
       <div class="content d-flex flex-column">
         <div class="head mb-5 text-center">
-          <h2 class="">Don't waste your time looking for a place to park </h2>
+          <h2>Don't waste your time looking for a place to park </h2>
           <p>Search our listings and find the perfect spot near your home or office. </p>
         </div>
         <div
-          class="items text-center d-flex  flex-lg-row flex-md-column col-lg-10 m-auto align-items-center align-content-center">
+          class="items text-center d-flex  flex-lg-row flex-sm-column col-8 col-lg-10 m-auto align-items-center align-content-center">
           <div class="item d-flex flex-column flex-wrap align-items-center col-md-4 col-sm-8 mb-sm-4">
             <img src="./images/mapIllustration@2x.png" alt="map" height="200" width="200">
             <h3 class="my-4">Search For Parking </h3>
@@ -145,19 +200,19 @@
       </div>
       <div class="content col-lg-10 m-auto">
         <div class="partner">
-          <img src="./images/HomeToHome.png" alt="HomeToHome logo  width=" 150" height="100"">
+          <img src="./images/HomeToHome.png" alt="HomeToHome logo" width="150" height="100">
         </div>
         <div class=" partner">
-          <img src="./images/mag.png" alt="MAG logo  width=" 150" height="100"">
+          <img src="./images/mag.png" alt="MAG logo" width="150" height="100">
         </div>
         <div class=" partner">
-          <img src="./images/NationalCarParks.png" alt="NationalCarParks logo  width=" 150" height="100"">
+          <img src="./images/NationalCarParks.png" alt="NationalCarParks logo" width="150" height="100">
         </div>
         <div class=" partner">
-          <img src="./images/deyaar.png" alt="deyaar logo  width=" 150" height="100"">
+          <img src="./images/deyaar.png" alt="deyaar logo" width="150" height="100">
         </div>
         <div class=" partner">
-          <img src="./images/doubletree.png" alt="doubletree logo  width=" 150" height="100"">
+          <img src="./images/doubletree.png" alt="doubletree logo" width="150" height="100">
         </div>
         <div class=" partner">
           <img src="./images/dubizzle.png" alt="dubizzle logo" width="150" height="100">
@@ -168,11 +223,226 @@
       </div>
     </div>
   </section>
+  <!-- End of Partners Section -->
+
+  <!-- Places Section -->
+  <section class="places">
+    <div class="head col-lg-10 m-auto border-top text-center">
+      <h2 class="">Popular Places in Dubai</h2>
+      <p>Dubai Parking Hot Spots </p>
+    </div>
+    <div class="place-content">
+      <div class="p-items">
+        <div class="img1 d-flex flex-column justify-content-center align-items-center p-item position-relative">
+          <!-- <img class="img1" src="./images/SZR.jpg" alt="SZR"> -->
+          <a class="texts position-absolute">
+            <h3>Sheikh Zayed Road</h3>
+            <p>Find Parking near Sheikh Zayed Road Dubai.</p>
+          </a>
+        </div>
+
+        <div class="img2 p-item position-relative">
+          <!-- <img class="img2" src="./images/category-box-01.jpg" alt="category1"> -->
+          <a class="texts position-absolute">
+            <h3>Jumeirah Lake Towers</h3>
+            <p>Find parking in Jumeirah Lake Towers.</p>
+          </a>
+        </div>
+
+        <div class="img3 p-item position-relative">
+          <!-- <img class="img3" src="./images/DubaiMarina.jpg" alt="Dubai Marina"> -->
+          <a class="texts position-absolute">
+            <h3>Dubai Marina</h3>
+            <p>Find Parking in Dubai Marina.</p>
+          </a>
+        </div>
+
+        <div class="img4 p-item position-relative">
+          <!-- <img class="img4" src="./images/category-box-05.jpg" alt="category-box-05"> -->
+          <a class="texts position-absolute">
+            <h3>Downtown</h3>
+            <p>Find Parking in Downtown Dubai.</p>
+          </a>
+        </div>
+
+        <div class=" img5 p-item position-relative">
+          <!-- <img class="img5" src="./images/barshaheights.png" alt="barsha heights"> -->
+          <a class="texts position-absolute">
+            <h3>Barsha Heights</h3>
+            <p>Find Parking in Barsha Heights Dubai.</p>
+          </a>
+        </div>
+
+        <div class="img6 p-item position-relative">
+          <!-- <img class="img6" src="./images/dubai-1367094_1280.jpg" alt="dubai"> -->
+          <a class="texts position-absolute">
+            <h3>DIFC</h3>
+            <p>Find Parkign in Dubai International FInancial Centre.</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End of places section -->
+
+  <!-- Community Section -->
+  <section class="community">
+    <div class="head col-lg-8 m-auto text-center">
+      <h2 class="">Our Community</h2>
+      <p>It's always good to hear what others think, check out these reviews from the awesome users & business partners
+        we work with!</p>
+    </div>
+    <div class="c-content">
+      <div class="client align-items-sm-center d-md-flex flex-md-column">
+        <div class="review">
+          Thank you YallaParking for easing my parking woes in Business Bay. You lot are stars!
+        </div>
+        <div class="person">
+          <img src="./images/MUNAD_AKBARI.jpg" alt="MUNAD AKBARI">
+          <h3 class="text-center mt-2">Munad Akbari</h3>
+        </div>
+      </div>
+
+      <div class="client align-items-sm-center d-md-flex flex-md-column">
+        <div class="review">
+          With the summer heat in the 50's..outside parking wasn't an option...voila YallaParking...In just a couple
+          minutes I was able to select my parking location online and received all confirmation details via email...!!
+        </div>
+        <div class="person">
+          <img src="./images/ZAK_ILDUCELIBIA.jpg" alt="client">
+          <h3 class="text-center mt-2">Zak Ilducelibia</h3>
+        </div>
+      </div>
+
+      <div class="client align-items-sm-center d-md-flex flex-md-column">
+        <div class="review">
+          Much needed service for Dubai. Easy to use. Great customer service.
+        </div>
+        <div class="person person3">
+          <img src="./images/STEPHANIE_WILLIAMS.jpg" alt="client">
+          <h3 class="text-center mt-2">Stephanie Williams</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End of community -->
+
+  <!-- Featured -->
+  <section class="featured">
+    <div class="container">
+      <div class="content col-lg-10 m-auto">
+        <div class="head col-lg-8 m-auto text-center">
+          <h2 class="">As featured in</h2>
+        </div>
+        <div class="logos d-flex flex-lg-row justify-content-center flex-column">
+          <img src="./images/IncArabia.png" alt="IncArabia">
+          <img src="./images/Entrepreneur.png" alt="Entrepreneur">
+          <img src="./images/TheNational.png" alt="TheNational">
+          <img src="./images/wamda.png" alt="wamda">
+          <img src="./images/Dubaieye.png" alt="Dubaieye">
+
+        </div>
+
+        <div class="head head2 col-lg-8 m-auto text-center">
+          <h2 class="">How Listing Works </h2>
+          <p>Help out a neighbour in need by easily adding your parking space. We take care of the access cards,
+            deposits, confirmation & payments.!</p>
+        </div>
+        <div class="d-flex it flex-column">
+          <div class="items text-center row">
+            <div class="item col-md-4 mb-sm-4">
+              <i class="fas fa-map-marked-alt icons"></i>
+              <h3 class="my-4">List Parking </h3>
+              <p class="text-muted">Add your unused space & choose a price. </p>
+            </div>
+
+            <div class="item col-md-4 mb-sm-4">
+              <i class="fas fa-key icons"></i>
+              <h3 class="my-4">Confirm</h3>
+              <p class="text-muted">Confirm a convenient time for one of our team to pick up your access card when you
+                receive a booking.</p>
+            </div>
+
+            <div class="item col-md-4">
+              <i class="far fa-money-bill-alt icons"></i>
+              <h3 class="my-4">Earn</h3>
+              <p class="text-muted">Earn money each Month from your unused space, deposited directly to your account.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Featured End -->
+
+  <!-- Join Section -->
+  <section class="join position-relative">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="content position-absolute">
+        <h2>List Your Parking Space </h2>
+        <p>Join our growing community of over 700 parking spaces & start earning today.</p>
+        <button class="btn font-700 border-0 border-round">Let's Get Started</button>
+      </div>
+    </div>
+  </section>
+  <!-- End of Join -->
+
+  <footer>
+    <div class="container">
+      <div class="d-flex cont border-bottom justify-content-between  align-items-center">
+        <div class="left col-md-3 col-sm-6">
+          <img src="./images/logo.png" alt="yallaparking">
+          <p class="text-muted">Rent an unused space from a neighbour in your building or area, OR, earn money renting
+            yours out to a neighbour in need.</p>
+        </div>
+        <div class="right">
+          <div class="d-flex flex-row justify-content-center align-items-center">
+            <div class="lists align-self-baseline d-flex flex-column">
+              <h4 class="d-block">Helpful Links</h4>
+              <div class="d-flex flex-row mt-4">
+                <ul class="list">
+                  <li><a href=""><span class="arrows"></span> Log In</a></li>
+                  <li><a href=""><span class="arrows"></span> Register</a></li>
+                  <li><a href=""><span class="arrows"></span> About Us</a></li>
+                  <li><a href=""><span class="arrows"></span> Commercial Partners</a></li>
+                </ul>
+                <ul class="list">
+                  <li><a href=""><span class="arrows"></span> FAQs</a></li>
+                  <li><a href=""><span class="arrows"></span> Terms & Conditions</a></li>
+                  <li><a href=""><span class="arrows"></span> Cancellation & Refund</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="info row col-md-3 col-sm-6 ml-5 ">
+              <h4>Contact Us</h4>
+              <p>In5 Innovation Centre, Boutique Office Villa #7, Dubai Media City, Dubai, United Arab Emirates
+                Phone: +971585772881
+                E-Mail:
+                <a href="">hello@yallaparking.com</a>
+              </p>
+
+              <div class="links d-flex flex-row">
+                <a href="http://"><i class="fab fa-facebook-f icon"></i></a>
+                <a href="http://"><i class="fab fa-twitter icon"></i></a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyrights text-center text-muted my-5">
+        &#169; 2017 - 2020 YallaParking Internet FZ LLC. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
 
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
+  <script src=" https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
     integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
     crossorigin="anonymous"></script>
@@ -183,9 +453,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-
+  <script src="js/bootstrap.min.js"></script>
   <!-- Slick CDN -->
   <script src="js/slick.js"></script>
+  <script src="js/firebase.js" type="module"></script>
   <script src="js/main.js"></script>
   <!-- 
       The `defer` attribute causes the callback to execute after the full HTML

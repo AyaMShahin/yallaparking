@@ -600,6 +600,9 @@ nav .form-inline .lost_password .lost:hover {
 footer .cont {
   padding-bottom: 70px;
 }
+footer .left img{
+  max-width: 155px;
+}
 footer .right {
   margin-top: 60px;
 }
